@@ -1,113 +1,95 @@
-/* General body styles */
 body {
     font-family: Arial, sans-serif;
     padding: 20px;
     background: #f9f9f9;
   }
   
-  /* Heading styles */
-  h1 {
-    text-align: center;
-    color: #333;
-  }
-  
-  /* Section titles */
-  h2 {
-    color: #333;
-    margin-bottom: 10px;
-  }
-  
-  /* Button styles */
-  button {
-    display: inline-block;
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    margin: 10px 0;
-    font-size: 16px;
-    cursor: pointer;
-    border: none;
-    border-radius: 4px;
-    text-align: center;
-  }
-  
-  button:hover {
-    background-color: #45a049;
-  }
-  
-  /* Form styles */
   form {
     margin-bottom: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
   }
   
-  /* Form input and label styles */
-  label, input {
+  label, input, button {
+    display: block;
     margin: 10px 0;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  #reaction-choice {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  #reaction-choice button {
+    padding: 10px 20px;
     font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
   }
   
-  input[type="text"], input[type="number"] {
-    width: 300px;
-    padding: 8px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-  }
-  
-  /* Style for the reaction step sections in multi-step */
   #steps-container {
     margin-bottom: 20px;
   }
   
   .step {
     margin-bottom: 20px;
-    padding: 10px;
-    background-color: #f1f1f1;
-    border-radius: 5px;
   }
   
   #add-step {
-    background-color: #007BFF;
-    margin: 10px 0;
-  }
-  
-  #add-step:hover {
-    background-color: #0056b3;
-  }
-  
-  /* Canvas container styling */
-  div {
-    text-align: center;
-  }
-  
-  canvas {
-    margin-top: 20px;
-    border: 2px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  form button[type="submit"] {
-    background-color: #4CAF50;
-    color: white;
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
-    border: none;
-    border-radius: 4px;
-    text-align: center;
-    margin-top: 10px;
   }
   
-  form button[type="submit"]:hover {
+  #multi-step-form button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+  }
+  
+  canvas {
+    border: 1px solid #ccc;
+    margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  input[type="text"], input[type="number"] {
+    padding: 8px;
+    font-size: 16px;
+    width: 100%;
+    max-width: 400px;
+    margin: 10px 0;
+    box-sizing: border-box;
+  }
+  
+  button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
     background-color: #45a049;
   }
   
-  #overlayCanvas {
-    position: absolute;
-    top: 0;
-    left: 0;
-    pointer-events: none;
+  button[type="button"] {
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  button[type="button"]:hover {
+    background-color: #007bb5;
   }
   

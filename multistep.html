@@ -3,27 +3,27 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Multi-Step Reaction - Chemistry Enthalpy Diagram</title>
+    <title>Multi-Step Reaction</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@1.1.0"></script>
 </head>
 <body>
-    <h1>Multi-Step Reaction Enthalpy Diagram</h1>
-
-    <form id="chemistry-form">
+    <h1>Multi-Step Reaction</h1>
+    
+    <form id="multi-step-form">
         <div id="steps-container">
             <div class="step">
-                <label for="reactants">Reactants:</label>
-                <input type="text" class="reactants" required />
+                <label for="reactants-step-1">Reactants (Step 1):</label>
+                <input type="text" id="reactants-step-1" required>
 
-                <label for="products">Products:</label>
-                <input type="text" class="products" required />
-
-                <label for="enthalpy-change">ΔH (kJ):</label>
-                <input type="number" class="enthalpy-change" required />
+                <label for="products-step-1">Products (Step 1):</label>
+                <input type="text" id="products-step-1" required>
             </div>
         </div>
+        
         <button type="button" id="add-step">Add Step</button>
-        <button type="submit">Generate Diagram</button>
+        <button type="submit">Generate Multi-Step Diagram</button>
     </form>
 
     <div style="position: relative; display: inline-block;">

@@ -5,14 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chemistry Enthalpy Diagram</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@1.1.0"></script>
 </head>
 <body>
-    <h1>Welcome to the Enthalpy Diagram Generator</h1>
+    <h1>Chemistry Enthalpy Diagram</h1>
 
-    <div>
-        <h2>Choose Reaction Type:</h2>
-        <button onclick="location.href='normal.html'">Normal Reaction</button>
-        <button onclick="location.href='multistep.html'">Multi-Step Reaction</button>
+    <!-- Page to choose between normal reaction or multi-step reaction -->
+    <div id="reaction-choice">
+        <button id="normal-reaction-btn">Normal Reaction</button>
+        <button id="multi-step-reaction-btn">Multi-Step Reaction</button>
+    </div>
+
+    <!-- Normal Reaction Form -->
+    <div id="normal-reaction-form" style="display: none;">
+        <form id="chemistry-form">
+            <label for="reactants">Reactants:</label>
+            <input type="text" id="reactants" required />
+
+            <label for="products">Products:</label>
+            <input type="text" id="products" required />
+
+            <label for="enthalpy-change">ΔH (kJ):</label>
+            <input type="number" id="enthalpy-change" required />
+
+            <button type="submit">Generate Diagram</button>
+        </form>
+
+        <div style="position: relative; display: inline-block;">
+            <canvas id="potentialEnergyDiagram" width="800" height="500"></canvas>
+            <canvas id="overlayCanvas" width="800" height="500" style="position: absolute; top: 0; left: 0; pointer-events: none;"></canvas>
+        </div>
+    </div>
+
+    <!-- Multi-Step Reaction Form -->
+    <div id="multi-step-reaction-form" style="display: none;">
+        <div id="steps-container">
+            <!-- Steps will be dynamically added here -->
+        </div>
+        <button id="add-step">Add Step</button>
+
+        <form id="multi-step-form">
+            <label for="overall-enthalpy-change">Overall ΔH (kJ):</label>
+            <input type="number" id="overall-enthalpy-change" required />
+
+            <button type="submit">Generate Multi-Step Diagram</button>
+        </form>
+
+        <div style="position: relative; display: inline-block;">
+            <canvas id="multiStepEnergyDiagram" width="800" height="500"></canvas>
+        </div>
     </div>
 
     <script src="script.js"></script>
