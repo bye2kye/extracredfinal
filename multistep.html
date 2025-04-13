@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multi-Step Reaction - Chemistry Enthalpy Diagram</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <h1>Multi-Step Reaction Enthalpy Diagram</h1>
+
+    <form id="chemistry-form">
+        <div id="steps-container">
+            <div class="step">
+                <label for="reactants">Reactants:</label>
+                <input type="text" class="reactants" required />
+
+                <label for="products">Products:</label>
+                <input type="text" class="products" required />
+
+                <label for="enthalpy-change">ΔH (kJ):</label>
+                <input type="number" class="enthalpy-change" required />
+            </div>
+        </div>
+        <button type="button" id="add-step">Add Step</button>
+        <button type="submit">Generate Diagram</button>
+    </form>
+
+    <div style="position: relative; display: inline-block;">
+        <canvas id="potentialEnergyDiagram" width="800" height="500"></canvas>
+        <canvas id="overlayCanvas" width="800" height="500" style="position: absolute; top: 0; left: 0; pointer-events: none;"></canvas>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
